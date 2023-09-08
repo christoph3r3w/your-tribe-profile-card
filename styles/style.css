@@ -20,7 +20,7 @@ article {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-end;
+  justify-content:center;
   width: 50vw;
   max-width: 25em;
   min-width: 20em;
@@ -29,20 +29,30 @@ article {
   background: linear-gradient(0deg, rgba(0,239,255,1) 40%, #4e54c8 100%);
   box-shadow: 0 0 20px 20px rgba(0,0,0,.1);
   transition: .25s;
+  
 }
 
-header {
+.item{
+  position :relative;
+  background-color:lightblue;
+  border:10px;
+}
+
+.header {
   display: flex;
-  flex-direction: column;
+  /* flex-direction: column;
   justify-content: center;
-  align-items: center;
-  justify-content: flex-end;
+  align-items: center; */
+  flex-grow:1;
+  border-radius: 1rem;
+
+  
 }
 
-h1 {
+/* h1 { 
   margin: 2rem 0 1rem;
   color: rgba(0,239,255,1);
-}
+}*/
 
 button {
   position: absolute;
@@ -70,7 +80,7 @@ svg {
   top: calc(1.25rem - 12px);
   left: calc(1.25rem - 12px);
   stroke: #4e54c8;
-  transition-delay: .25s;
+  transition-delay: .12s;
 }
 button svg:nth-of-type(2) {
   opacity: 0;
@@ -78,17 +88,18 @@ button svg:nth-of-type(2) {
 }
 
 img {
+  
   position: relative;
-  top: 2rem;
-  width: 10em;
-  height: auto;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
   border: 5px solid #fff;
-  border-radius: 10em;
-  box-shadow: 0 0 2px 2px rgba(0,0,0,.2);
+  border-radius: 1rem;
+  box-shadow: 0 0 2px 2px rgba(0,0,0,.2); 
   transition: .25s .15s;
 }
 
-dl {
+/*dl {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-template-areas:
@@ -129,19 +140,25 @@ dd {
 }
 dd:nth-of-type(2){  
   transform: translateY(1rem);
+}*/
+
+.p { 
+  display:flex;
+  /* margin: 0;
+  margin-top: auto; */
+  opacity: 100%;
+  height:70%; 
+;
 }
 
-p { 
-  margin: 0;
-}
-
-article > p {
+article > .p {
   width: 100%;
   margin-top: 0;
   padding: 3rem 2rem;
   border-radius: 0 0 1rem 1rem;
   text-align: center;
   background: rgba(255,255,255, 0.5);
+  height:80%;
 }
 
 /* expand content */
@@ -170,4 +187,10 @@ body.expand dd {
 
 body.expand img {
   width: 15em;
+  bottom:25%;
+  opacity:30%;
+}
+article.expand p {
+  
+  opacity:30%;
 }
